@@ -1,6 +1,5 @@
 package kstu_epam;
 
-// сборка матриц
 public class Matrix {
     public static void main(String[] args) {
         App a = new App();

@@ -1,19 +1,17 @@
 package kstu_epam;
-//вывод
 
 public class App {
-    //размерности матриц (n - количество строк матрицы А;
-    //m - количество столбцов/строк матрицы А/B; l - количество столбцов матрицы B)
+
     int n = 3; //количество строк матрицы А
-    int m = 2;
-    int l = 3;
+    int m = 2; //количество столбцов/строк матрицы А/B
+    int l = 3; //l - количество столбцов матрицы B
     //сами матрицы
     int i, j, k;
     int[][] A;
     int[][] B;
     int[][] C;
 
-    public void mA() {
+    public void mA() { //заполнение А
         A = new int[n][m];
         for (i = 0; i < n; i++) {
             for (j = 0; j < m; j++) {
@@ -22,7 +20,7 @@ public class App {
         }
     }
 
-    public void mvA(){
+    public void mvA(){ //вывод А
         System.out.println("Матрица А:");
         for (i = 0; i < n; i++) {
             for (j = 0; j < m; j++) {
@@ -32,7 +30,7 @@ public class App {
         }
     }
 
-        public void mB() {
+        public void mB() { //заполнение В
             B = new int[m][l];
             for (i = 0; i < m; i++) {
                 for (j = 0; j < l; j++) {
@@ -41,7 +39,7 @@ public class App {
             }
         }
 
-        public void mvB() {
+        public void mvB() { //вывод В
             System.out.println("Матрица B:");
             for (i = 0; i < m; i++) {
                 for (j = 0; j < l; j++) {
@@ -50,7 +48,7 @@ public class App {
             }
         }
 
-         public void mC() {
+         public void mC() { //произведение А и В
                 C = new int[n][l];
                 System.out.println("Произведение матриц A и B:");
                 for (i = 0; i < n; i++) {
