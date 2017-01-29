@@ -3,13 +3,14 @@ package kstu_epam;
 public class Matrix {
     public static void main(String[] args) {
         App a = new App();
-        a.mA();
-        a.mvA();
+        a.fillMatrixA();
+        a.showMatrixA();
         System.out.println();
-        a.mB();
-        a.mvB();
+        a.fillMatrixB();
+        a.showMatrixB();
         System.out.println();
-        a.mC();
+        UmnojMatrix b = new UmnojMatrix();
+        b.multiplication();
         System.out.println();
 
     }

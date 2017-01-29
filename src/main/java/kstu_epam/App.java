@@ -2,63 +2,55 @@ package kstu_epam;
 
 public class App {
 
-    int n = 3; //количество строк матрицы А
-    int m = 2; //количество столбцов/строк матрицы А/B
-    int l = 3; //l - количество столбцов матрицы B
+    private static final int N = 3; //количество строк матрицы А
+    private static final int M = 2; //количество столбцов/строк матрицы А/B
+    private static final int L = 3; //l - количество столбцов матрицы B
+    private String g = "Матрица А:";
+    private String o = "Матрица B:";
     //сами матрицы
-    int i, j, k;
-    int[][] A;
-    int[][] B;
-    int[][] C;
 
-    public void mA() { //заполнение А
-        A = new int[n][m];
-        for (i = 0; i < n; i++) {
-            for (j = 0; j < m; j++) {
-                A[i][j] = (int) (Math.random() * 20);
+    int[][] a;
+    int[][] b;
+
+
+    public int[][] fillMatrixA() { //заполнение А
+        a = new int[N][M];
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                a[i][j] = (int) (Math.random() * 20);
+            }
+        }
+        return a;
+    }
+
+    public void showMatrixA() { //вывод А
+        System.out.println(g);
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                System.out.print(a[i][j] + (j == M - 1 ? "\n" : "\t"));
+
+
             }
         }
     }
 
-    public void mvA(){ //вывод А
-        System.out.println("Матрица А:");
-        for (i = 0; i < n; i++) {
-            for (j = 0; j < m; j++) {
-                System.out.print(A[i][j] + (j == m - 1 ? "\n" : "\t"));
+        public int[][] fillMatrixB() { //заполнение В
+            b = new int[M][L];
+            for (int i = 0; i < M; i++) {
+                for (int j = 0; j < L; j++) {
+                    b[i][j] = (int) (Math.random() * 20);
+                }
             }
-
+            return b;
         }
-    }
 
-        public void mB() { //заполнение В
-            B = new int[m][l];
-            for (i = 0; i < m; i++) {
-                for (j = 0; j < l; j++) {
-                    B[i][j] = (int) (Math.random() * 20);
+        public void showMatrixB() { //вывод В
+            System.out.println(o);
+            for (int i = 0; i < M; i++) {
+                for (int j = 0; j < L; j++) {
+                    System.out.print(b[i][j] + (j == L - 1 ? "\n" : "\t"));
                 }
             }
         }
 
-        public void mvB() { //вывод В
-            System.out.println("Матрица B:");
-            for (i = 0; i < m; i++) {
-                for (j = 0; j < l; j++) {
-                    System.out.print(B[i][j] + (j == l - 1 ? "\n" : "\t"));
-                }
-            }
-        }
-
-         public void mC() { //произведение А и В
-                C = new int[n][l];
-                System.out.println("Произведение матриц A и B:");
-                for (i = 0; i < n; i++) {
-                    for (j = 0; j < l; j++) {
-                        for (k = 0; k < m; k++) {
-                            C[i][j] += A[i][k] * B[k][j];
-                        }
-                        System.out.print(C[i][j] + (j == l - 1 ? "\n" : "\t"));
-                    }
-
-                }
-            }
         }
