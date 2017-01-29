@@ -22,7 +22,6 @@ public class App {
         }
         return a;
     }
-
     public void showMatrixA() { //вывод А
         System.out.println(g);
         for (int i = 0; i < N; i++) {
@@ -33,7 +32,6 @@ public class App {
             }
         }
     }
-
         public int[][] fillMatrixB() { //заполнение В
             b = new int[M][L];
             for (int i = 0; i < M; i++) {
